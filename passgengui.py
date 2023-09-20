@@ -3,12 +3,13 @@ from tkinter import *
 
 root =Tk()
 root.geometry("600x400") 
-root.title("nDox's Password Generator")
+root.title("Andoni's Password Generator")
  
 output_pass = StringVar()
  
-all_combi = [string.punctuation, string.ascii_uppercase, string.digits, string.ascii_lowercase]  #list of all possible characters
- 
+all = [string.punctuation, string.ascii_uppercase, string.digits, string.ascii_lowercase]  #list of all possible characters
+
+#Password function
 def randPassGen():
     password =""
     while True:
@@ -20,7 +21,7 @@ def randPassGen():
      
     output_pass.set(password)
   
-#Front-end Designing (GUI)
+#GUI
  
 pass_head = Label(root, text = 'Password Length', font = 'arial 12 bold').pack(pady=10)
  
